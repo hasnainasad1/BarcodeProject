@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="./qr/js/jquery.js"></script>
+    <script type="text/javascript" src="./qr/js/qrcode.js"></script>
+    <title>project-fiver</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div id="left" class="col-md">
+            <p>Test-Site-ID <b>AST-13184</b></p>
+          </div>
+          <div id="right" class="col-md-4">
+            <img src="./Screenshot (4).png" alt="">
+          </div>
+        </div>
+        <div class="row">
+            <div id="sec" class="col-md">
+                <h1><b>CERTIFICATE FOR THE <br>SARS-COV2 ANTIGEN TEST</b></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div id="thir" class="col-md-12">
+                <form onsubmit="generate();return false;">
+                    <p>In The following we certify.</p>
+                    <input type="text" id="qr" name="" placeholder="please enter name etc.">  
+                <p id="thiri"> <br> Jhon Smith born on 7/29/2021 <br> 55 Kaarst 55,41564 Kaarst <br> passport or identity card number:202143649404<br> the presence of a SARS-COV2 antigen test.<br> The result ID:30274 is as follows:</p>
+                </form>
+            </div>            
+        </div>
+        <div class="row">
+            <div id="for" class="col-md">
+                <h1><b>NEGATIVE</b></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div id="fif" class="col-md">
+                <h5><i>PLEASE NOTE:</i></h5>
+               <p style="font-size: smaller;"><i>Even a negation test reasult is only a snapshot and does not release you from hygione and protective measures (keyword AHA , L formula).A qiuck test, however, reducea the risk of unknowingly infecting others without corons symptoms.</i></p>
+            </div>
+        </div>
+        <div class="row">
+            <div id="six" class="col-md">
+               <p>The antigen test was carried out <br> on 01-07-2021 - 11-04 Uhr by</p>
+            </div>
+        </div>
+        <div class="row">
+            <div id="sev" class="col-md">
+               <h3><b>Testcentrum Drive-In</b></h3>
+               <p>Xantenerstr. <br>41564 Kaarst <br>Germany <br>Responsible for testing: Claudia Perters-Hinze e.K.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div id="eig" class="col-md">
+               <p>www.broicherdorf-apotheke.de - drive.in@broicherdorf-apotheke - + 49(2131)5252301</p>
+               <p>Antigen test used: SARS-COV2 Antigen Rapid Test Kit(A1424/21) with 98.00% sensitivity and 100.00% specificity.This <br>corresponds to the RKI criteria of sensitivity > 80% and a specificity of >97%. </p>
+            </div>
+        </div>   
+    </div>     
+    <div id="newone"class="container">
+        <div class="row">
+            <h4><b>DATA PROTECTION INFORMATION</b></h4>
+            <P><i>Iestcentrum Drive-In owner: Claudia Peters-Hinze e.K is responsible for the processing of your personal data.we use the data you provide in accordanace with Article 6 Paragraph 1 Sentence 1 Letter b or (with regard to health data) Article 0 Paragraph 2 Letter h GDPR to process the contract. you can obtain further information on the collection, processing and use of your personal data,blocking or deleting of data from us at the contact address given above.</i></P>
+        </div>
+        <div class="row">
+            <h5><b>LEGAL NOTICE</b></h5>
+            <P><i>Anyone who falsefies this document or incorectly certifies a test that has not been carried out or delibrately certifies a positive test as negative is liable to prosecution for falsefying documents under Section 267 of German Criminal Code. Anyone Who uses a forged document to gain acess to a facility or an offer is committing an administrative offense that is punishable by a fine.Any violation found will be reported</i></P>
+        </div>
+    </div>
+    <div class="container" style="margin-bottom: 50px;">
+        <div class="row">
+            <div id="fir" class="col-md-5">
+                <h6>Testcentrum Drive-In, <br> Claudia Perters-Hinze e.K.</h6>
+                <p><i>The document was created electronically <br> and is the valid without is signature. <br> To varify, please scan the QR code on the right.</i></p>
+            </div>
+            <div id="sndimg"class="col-md-3">
+               <img src="./Screenshot (5).png" alt="">
+            </div>
+            <div id="trdimg" class="col-md-4">
+                
+                <div id="qrResult" style="height: 100px;width: 100px">
+               </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- the QR-code -->	
+</div>
+
+<script type="text/javascript">
+	var qrcode=new QRCode(document.getElementById('qrResult'),{
+		width:100,
+		height:100
+	});
+
+function generate(){
+	var message=document.getElementById('qr');
+	if(!message.value){
+		alert("Input a text");
+		message.focus();
+		return;
+	}
+
+	qrcode.makeCode(message.value);
+    let store=message.value;
+    document.getElementById("thiri").innerHTML = store;
+}
+</script>
+<!--To Read QR Code-->
+<script type="text/javascript" src="./qr/js/qrReader.js"></script>
+</body>
+</html>
+
+<!-- <script src="./index.js"></script> -->

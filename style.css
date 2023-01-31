@@ -1,0 +1,71 @@
+.container{
+    margin-top: 20px;
+}
+#right{
+    padding-top: 20px;;
+}
+#right img{
+    width: 160px;
+    height: 100px;
+    align-items: center;
+}
+#sec{
+    text-align: center;
+    padding:20px 65px 20px 20px;
+}
+#thir{
+    text-align: center;
+    padding:0px 95px 0px 20px;
+
+}
+#for{
+    text-align: center;
+    padding:20px 95px 20px 20px;
+    color:hsl(112deg 59% 22%);
+}
+#fif{
+    text-align: center;
+    padding:0px 95px 0px 20px;
+}
+#six{
+    text-align: center;
+    padding:0px 95px 0px 20px;
+}
+#sev{
+    text-align: center;
+    padding:0px 95px 0px 20px;
+}
+#eig{
+    text-align: center;
+    padding:0px 47px 0px 20px;
+}
+
+#newone{
+    background-color: hsl(0deg 0% 93%);
+    padding:40px 30px 40px 30px;
+}
+#newone p{
+    font-size: smaller;
+    font-weight: bold;
+}
+#fir{
+    margin-top: 131px;;
+}
+#fir h6{
+    padding-bottom: 10px;
+}
+#fir p{
+    font-size: smaller;
+}
+#sndimg img {
+    padding-top: 20px;
+    width: 280px;
+    height: 190px;
+    align-items: center;
+    margin-top: 81px;
+}
+#trdimg img {
+    width: 360px;
+    height: 380px;
+    align-items: center;
+}
